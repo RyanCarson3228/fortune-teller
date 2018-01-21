@@ -97,12 +97,14 @@ public class FortuneTeller {
 			System.out.println("Nobody likes a quitter...");
 			System.exit(0);
 		}
-		if (color.trim().contains("help")) {
+		while (color.trim().contains("help")) {
 			System.out.println("The colors of the rainbow are easy! Just remember ROYGBIV.");
 			System.out.println("ROYGBIV stands for: Red, Orange, Yellow, Green, Blue, Indigo, and Violet!");
 			System.out.println("Which of those colors is your favorite?");
 			color = input.nextLine();
-		} else if (color.trim().toLowerCase().contains("red")) {
+		}
+
+		if (color.trim().toLowerCase().contains("red")) {
 			color = "red";
 		} else if (color.trim().toLowerCase().contains("orange")) {
 			color = "orange";
